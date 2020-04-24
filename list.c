@@ -19,8 +19,7 @@ List * create_list()
 
 void increase_list(List * list,int value)
 {
-  Node * new_node = malloc(sizeof(Node));
-  new_node->value = value;
+  Node * new_node = create_node(value);
   if(list->first == NULL){
     list->first = new_node;
   } else
@@ -29,4 +28,14 @@ void increase_list(List * list,int value)
   }
   list->Last = new_node;
   list->count++;
+}
+
+void display_list(List * list)
+{
+  Node * p_walk = list->first;
+  while (p_walk != NULL)
+  {
+    printf("%d\n",p_walk->value);
+    p_walk = p_walk->next;
+  }
 }
