@@ -1,9 +1,10 @@
 #include "list.h"
 
-Node * create_node(int value)
+Node * create_node(int value, int index)
 {
   Node * new_node = malloc(sizeof(Node));
   new_node->value = value;
+  new_node->index = index;
   new_node->next = NULL;
   return new_node;
 }
@@ -19,7 +20,7 @@ List * create_list()
 
 void increase_list(List * list,int value)
 {
-  Node * new_node = create_node(value);
+  Node * new_node = create_node(value,list->count);
   if(list->first == NULL){
     list->first = new_node;
   } else
