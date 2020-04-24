@@ -1,26 +1,26 @@
 #include "list.h"
 
-Node * create_node(int value, int index)
+Node_ptr create_node(int value, int index)
 {
-  Node * new_node = malloc(sizeof(Node));
+  Node_ptr new_node = malloc(sizeof(Node));
   new_node->value = value;
   new_node->index = index;
   new_node->next = NULL;
   return new_node;
 }
 
-List * create_list()
+List_ptr create_list()
 {
-  List * new_list =malloc(sizeof(List));
+  List_ptr new_list =malloc(sizeof(List));
   new_list->first = NULL;
   new_list->Last = NULL;
   new_list->count = 0;
   return new_list;
 }
 
-void increase_list(List * list,int value)
+void increase_list(List_ptr list,int value)
 {
-  Node * new_node = create_node(value,list->count);
+  Node_ptr new_node = create_node(value,list->count);
   if(list->first == NULL){
     list->first = new_node;
   } else
@@ -31,9 +31,9 @@ void increase_list(List * list,int value)
   list->count++;
 }
 
-void display_list(List * list)
+void display_list(List_ptr list)
 {
-  Node * p_walk = list->first;
+  Node_ptr p_walk = list->first;
   while (p_walk != NULL)
   {
     printf("%d\n",p_walk->value);

@@ -1,9 +1,9 @@
 #include "list.h"
 
-List * take_inputs_and_give_list()
+List_ptr take_inputs_and_give_list()
 {
   int number;
-  List * link_list = create_list();
+  List_ptr link_list = create_list();
   while (1)
   {
     printf("Please enter a number: \n");
@@ -16,9 +16,9 @@ List * take_inputs_and_give_list()
   return link_list;
 }
 
-int find_index(List * list,int num)
+int find_index(List_ptr list,int num)
 {
-  Node * p_walk = list->first;
+  Node_ptr p_walk = list->first;
   int index = -1;
   while (p_walk!=NULL)
   {
@@ -31,7 +31,7 @@ int find_index(List * list,int num)
   return index;
 }
 
-void find_number(List * list)
+void find_number(List_ptr list)
 {
   int number;
   while (1)
@@ -42,7 +42,6 @@ void find_number(List * list)
     {
       break;
     }
-    
     int index = find_index(list,number);
     if(index == -1){
       printf("%d is not present in the list\n",number);
