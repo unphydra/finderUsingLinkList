@@ -1,5 +1,5 @@
-#ifndef __link_list_finder_h_
-#define __link_list_finder_h_
+#ifndef __list_h_
+#define __list_h_
 #include <stdio.h>
 #include <stdlib.h>
 
