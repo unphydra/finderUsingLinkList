@@ -15,4 +15,6 @@ typedef struct
   Node *Last;
   int count;
 } List;
+
+Node * create_node(int);
 #endif
