@@ -20,4 +20,5 @@ Node * create_node(int);
 List * create_list();
 void increase_list(List *,int);
 void display_list(List *);
+List * take_inputs_and_give_list();
 #endif

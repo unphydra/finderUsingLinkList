@@ -2,10 +2,7 @@
 
 int main(void)
 {
-  List * a = create_list();
-  increase_list(a,5);
-  increase_list(a,7);
-  increase_list(a,9);
-  display_list(a);
+  List * link_list = take_inputs_and_give_list();
+  display_list(link_list);
   return 0;
 }
