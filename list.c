@@ -17,4 +17,16 @@ List * create_list()
   return new_list;
 }
 
-
+void increase_list(List * list,int value)
+{
+  Node * new_node = malloc(sizeof(Node));
+  new_node->value = value;
+  if(list->first == NULL){
+    list->first = new_node;
+  } else
+  {
+    list->Last->next = new_node;
+  }
+  list->Last = new_node;
+  list->count++;
+}

@@ -18,4 +18,5 @@ typedef struct
 
 Node * create_node(int);
 List * create_list();
+void increase_list(List *,int);
 #endif
