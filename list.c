@@ -8,4 +8,13 @@ Node * create_node(int value)
   return new_node;
 }
 
+List * create_list()
+{
+  List * new_list =malloc(sizeof(List));
+  new_list->first = NULL;
+  new_list->Last = NULL;
+  new_list->count = 0;
+  return new_list;
+}
+
 

@@ -2,7 +2,7 @@
 
 int main(void)
 {
-  Node * new = create_node(5);
-  printf("%d",new->value);
+  List * a = create_list();
+  printf("%d",a->count);
   return 0;
 }

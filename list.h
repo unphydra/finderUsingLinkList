@@ -17,4 +17,5 @@ typedef struct
 } List;
 
 Node * create_node(int);
+List * create_list();
 #endif
