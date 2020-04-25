@@ -1,5 +1,10 @@
 #include "list.h"
 
+void display_list(List_ptr);
+List_ptr take_inputs_and_give_list();
+void find_number(List_ptr );
+
+
 List_ptr take_inputs_and_give_list()
 {
   int number;
