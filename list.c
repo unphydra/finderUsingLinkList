@@ -31,12 +31,17 @@ void increase_list(List_ptr list,int value)
   list->count++;
 }
 
-void display_list(List_ptr list)
+int find_index(List_ptr list,int num)
 {
   Node_ptr p_walk = list->first;
-  while (p_walk != NULL)
+  int index = -1;
+  while (p_walk!=NULL)
   {
-    printf("%d\n",p_walk->value);
+    if(p_walk->value == num){
+      index = p_walk->index;
+      break;
+    }
     p_walk = p_walk->next;
   }
+  return index;
 }

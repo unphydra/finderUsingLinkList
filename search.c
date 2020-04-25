@@ -16,21 +16,6 @@ List_ptr take_inputs_and_give_list()
   return link_list;
 }
 
-int find_index(List_ptr list,int num)
-{
-  Node_ptr p_walk = list->first;
-  int index = -1;
-  while (p_walk!=NULL)
-  {
-    if(p_walk->value == num){
-      index = p_walk->index;
-      break;
-    }
-    p_walk = p_walk->next;
-  }
-  return index;
-}
-
 void find_number(List_ptr list)
 {
   int number;
@@ -50,5 +35,22 @@ void find_number(List_ptr list)
       printf("%d is present in the list at position %d\n",number,index);
     }
   } ;
-  
+}
+
+void display_list(List_ptr list)
+{
+  Node_ptr p_walk = list->first;
+  while (p_walk != NULL)
+  {
+    printf("%d\n",p_walk->value);
+    p_walk = p_walk->next;
+  }
+}
+
+int main(void)
+{
+  List_ptr link_list = take_inputs_and_give_list();
+  // display_list(link_list);
+  find_number(link_list);
+  return 0;
 }
